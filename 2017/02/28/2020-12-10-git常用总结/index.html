@@ -240,13 +240,13 @@
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">git branch <span class="hljs-keyword">new</span><span class="hljs-type">BranchName</span> HEAD@&#123;**&#125;<br></code></pre></td></tr></table></figure>
 
 <p>切换到新分支后，push到远端即可恢复远端分支</p>
-<p><img src="https://jacksonmei.github.io/img/in-post/findback-branch.png" srcset="/img/loading.gif" alt="找回分支"></p>
+<p><img src="/img/findback-branch.png" srcset="/img/loading.gif" alt="找回分支"></p>
 <h2 id="Git快捷命令配置（别名）"><a href="#Git快捷命令配置（别名）" class="headerlink" title="Git快捷命令配置（别名）"></a>Git快捷命令配置（别名）</h2><p>git bash窗口中vi /etc/bash.bashrc，在尾部添加如下代码</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-keyword">alias</span> gst=<span class="hljs-symbol">&#x27;git</span> status&#x27;<br><span class="hljs-keyword">alias</span> gdiff=<span class="hljs-symbol">&#x27;git</span> diff&#x27;<br><span class="hljs-keyword">alias</span> gadd=<span class="hljs-symbol">&#x27;git</span> add&#x27;<br><span class="hljs-keyword">alias</span> gci=<span class="hljs-symbol">&#x27;git</span> commit -m <span class="hljs-string">&quot;hello world&quot;</span>&#x27;<br><span class="hljs-keyword">alias</span> gthis=<span class="hljs-symbol">&#x27;git</span> rev-parse <span class="hljs-comment">--abbrev-ref HEAD&#x27;</span><br><span class="hljs-keyword">alias</span> gpush=<span class="hljs-symbol">&#x27;git</span> push origin `gthis`&#x27;<br><span class="hljs-keyword">alias</span> gco=<span class="hljs-symbol">&#x27;git</span> checkout&#x27;<br><span class="hljs-keyword">alias</span> gbr=<span class="hljs-symbol">&#x27;git</span> branch&#x27;<br><span class="hljs-keyword">alias</span> gname=<span class="hljs-symbol">&#x27;vi</span> /etc/bash.bashrc&#x27;<br></code></pre></td></tr></table></figure>
 
 <p>保存后重启bash窗口，生效快捷命令映射</p>
 <p>若保存时，遇到[/etc/bashrc Permission denied，则用管理员权限打开git bash重试即可</p>
-<p><img src="https://jacksonmei.github.io/img/in-post/bash-run.png" srcset="/img/loading.gif" alt="管理员权限运行bash"></p>
+<p><img src="/img/bash-run.png" srcset="/img/loading.gif" alt="管理员权限运行bash"></p>
 <h2 id="记录Git用户名密码"><a href="#记录Git用户名密码" class="headerlink" title="记录Git用户名密码"></a>记录Git用户名密码</h2><p>git 默认每次pull等操作时要求输入密码，比较麻烦，可通过如下命令永久保存密码，再输入一次后就无需输入了。</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">git <span class="hljs-built_in">config</span> credential.helper store<br></code></pre></td></tr></table></figure>
 
@@ -279,15 +279,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/02/28/hello-world/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2017/02/28/hello-world/">
+                        <span class="hidden-mobile">Kubernetes Pod知识图谱</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

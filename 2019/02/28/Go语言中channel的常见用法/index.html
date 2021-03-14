@@ -188,7 +188,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      92 字
     </span>
   
 
@@ -231,7 +231,12 @@
             <h1 style="display: none">Go语言中channel的常见用法</h1>
             
             <div class="markdown-body">
-              
+              <h2 id="channel基本用法"><a href="#channel基本用法" class="headerlink" title="channel基本用法"></a>channel基本用法</h2><h2 id="channel骚操作"><a href="#channel骚操作" class="headerlink" title="channel骚操作"></a>channel骚操作</h2><h4 id="校验channel是否关闭"><a href="#校验channel是否关闭" class="headerlink" title="校验channel是否关闭"></a>校验channel是否关闭</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">if</span> v, ok := &lt;- ch; ok &#123;<br>    fmt.Println(v)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="控制函数并发度"><a href="#控制函数并发度" class="headerlink" title="控制函数并发度"></a>控制函数并发度</h4><p>如下函数test在多个线程中运行，但同时并发只能有5个实例，如在redis 连接池的处理</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs go">ch := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">string</span>, <span class="hljs-number">5</span>)<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span> &#123;<br>    ch &lt;- <span class="hljs-string">&quot;test start&quot;</span><br>    <span class="hljs-keyword">defer</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> &#123;<br>        &lt;-ch<br>    &#125;<br>    <span class="hljs-comment">// do something</span><br>    ... <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="！未完待续"><a href="#！未完待续" class="headerlink" title="！未完待续"></a>！未完待续</h3>
             </div>
             <hr>
             <div>
@@ -258,9 +263,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2019/02/28/k8s%20informer%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+                      <a href="/2021/03/14/C-std-priority-queue%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E8%AF%A6%E8%A7%A3/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">K8S informer机制与使用</span>
+                        <span class="hidden-mobile">C++ std::priority_queue优先队列详解</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -268,8 +273,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/02/28/k8s%20pod%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">
-                        <span class="hidden-mobile">Kubernetes Pod知识图谱</span>
+                      <a href="/2019/02/28/k8s%20informer%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+                        <span class="hidden-mobile">K8S informer机制与使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
